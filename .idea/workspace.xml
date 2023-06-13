@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bd2243b-cedd-493b-8223-dcbae5ba7ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/bdd/DeleteFour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/bdd/InsertFour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/bdd/ModifierFour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/testGlobal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entites/Fournisseur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/TestConnectionJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/TestConnectionJdbc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/TestInsertion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/bdd/ListeFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/bdd/ListeFour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/testGlobal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/testGlobal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -115,7 +115,7 @@
       <workItem from="1686584501631" duration="1543000" />
       <workItem from="1686586129587" duration="908000" />
       <workItem from="1686643712545" duration="1254000" />
-      <workItem from="1686644996712" duration="4289000" />
+      <workItem from="1686644996712" duration="9095000" />
     </task>
     <servers />
   </component>

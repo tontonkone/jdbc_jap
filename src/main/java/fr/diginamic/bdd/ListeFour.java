@@ -1,6 +1,10 @@
 package fr.diginamic.bdd;
 
+import fr.diginamic.jdbc.entites.Fournisseur;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class ListeFour {
@@ -18,11 +22,21 @@ public class ListeFour {
 
     public static void listerFournisseurs() {
 
+        ArrayList<Fournisseur> arrayFournisseur = new ArrayList<>();
+
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              Statement st = connection.createStatement();
              ResultSet rs = st.executeQuery("SELECT * FROM FOURNISSEUR")) {
+
+
             while (rs.next()) {
-                System.out.println(rs.getInt(1) + " - " + rs.getString("NOM"));
+
+                int id = rs.getInt(1);
+                String nom = rs.getString("NOM");
+
+                Fournisseur newFournisseur = new Fournisseur(id,nom);
+                arrayFournisseur.add(newFournisseur);
+                System.out.println(newFournisseur.getId() + newFournisseur.getNom());
             }
         } catch (SQLException e) {
             System.err.println(e.getMessage());

@@ -1,19 +1,19 @@
 Hello World
 
-        try ( Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            Statement statement = connection.createStatement()){
-            int nb = statement.executeUpdate("INSERT INTO FOURNISSEUR (nom) VALUES ('rotgrts')");
+try ( Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+    Statement statement = connection.createStatement()){
+    int nb = statement.executeUpdate("INSERT INTO FOURNISSEUR (nom) VALUES ('rotgrts')");
 
-            ResultSet result = statement.executeQuery("select * from ARTICLE");
+    ResultSet result = statement.executeQuery("select * from ARTICLE");
 
-            while(result.next()){
-                System.out.println(result.getInt(1) + " " + result.getString(2) + result.getString(3));
-            }
-            result.close();
-
-            System.out.println("connection ok ");
-        }catch (SQLException e){
-            throw new RuntimeException(e.getMessage());
-        }
-
+    while(result.next()){
+        System.out.println(result.getInt(1) + " " + result.getString(2) + result.getString(3));
     }
+    result.close();
+
+    System.out.println("connection ok ");
+}catch (SQLException e){
+    throw new RuntimeException(e.getMessage());
+}
+
+}

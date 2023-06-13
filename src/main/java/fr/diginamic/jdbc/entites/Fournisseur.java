@@ -10,7 +10,10 @@ public class Fournisseur {
     public Fournisseur(){
 
     }
+    public Fournisseur(String nom ){
+        this.nom = nom ;
 
+    }
     public int getId() {
         return id;
     }
@@ -25,12 +28,5 @@ public class Fournisseur {
 
     public void setNom(String nom) {
         this.nom = nom;
-    }
-
-    @Override
-    public String toString() {
-        return "Fournisseur " +
-                "id=" + id +
-                ", nom='" + nom + '\'';
     }
 }

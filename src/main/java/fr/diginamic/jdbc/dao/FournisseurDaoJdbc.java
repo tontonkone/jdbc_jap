@@ -42,12 +42,12 @@ public class FournisseurDaoJdbc implements FournisseurDao{
     }
 
     @Override
-    public void insert(String fournisseur) {
+    public void insert(Fournisseur fournisseur) {
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              Statement st = connection.createStatement()) {
 
-            int nb = st.executeUpdate("INSERT INTO FOURNISSEUR (NOM) VALUES ('"+fournisseur+"')");
+            int nb = st.executeUpdate("INSERT INTO FOURNISSEUR (NOM) VALUES ('"+fournisseur.getNom()+"')");
             System.out.println(nb);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
@@ -57,28 +57,30 @@ public class FournisseurDaoJdbc implements FournisseurDao{
 
     @Override
     public int update(String ancienNom, String nouveauNom) {
+
+        int nb = 0;
         try (Connection connection =  DriverManager.getConnection(URL, USER, PASSWORD);
              Statement st = connection.createStatement()) {
-            int nb = st.executeUpdate("UPDATE FOURNISSEUR SET NOM = '"+ ancienNom + "' WHERE NOM = '" + nouveauNom + "'");
+             nb = st.executeUpdate("UPDATE FOURNISSEUR SET NOM = '"+ ancienNom + "' WHERE NOM = '" + nouveauNom + "'");
             System.out.println(nb);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
-        return 1;
+        return nb;
     }
 
 
 
     @Override
-    public void  delete(String nom) {
+    public Boolean  delete(String nom) {
+        int nb = 0;
         try (Connection connection =  DriverManager.getConnection(URL, USER, PASSWORD);
              Statement st = connection.createStatement()) {
-            int nb = st.executeUpdate("DELETE FROM FOURNISSEUR WHERE NOM ='"+nom+"'");
+             nb = st.executeUpdate("DELETE FROM FOURNISSEUR WHERE NOM ='"+nom+"'");
             System.out.println(nb);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
-        }
-        System.out.println("fournisseur sup");
-
+        };
+        return nb >= 1;
     }
 }

@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface FournisseurDao {
     List<Fournisseur> extraire();
-    void insert(String fournisseur);
+    void insert(Fournisseur fournisseur);
     int update(String ancienNom, String nouveauNom);
-    void delete(String nom);
+    Boolean delete(String nom);
 
 }

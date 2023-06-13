@@ -13,8 +13,8 @@ public class testGlobal {
         FournisseurDaoJdbc fourntab = new FournisseurDaoJdbc();
 
         ArrayList<Fournisseur> arrayNew = (ArrayList<Fournisseur>) fourntab.extraire();
-
-        fourntab.insert(new Fournisseur("fff \'' avieddsssd"));
+        for( Fournisseur arr : arrayNew) System.out.println(arr + "\n");
+        fourntab.insert(new Fournisseur(" L\''Espace Création"));
 
     }
 }
